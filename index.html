@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Reddit Post Generator V2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-download.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="dom-to-image/dist/dom-to-image.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <div id="blur"></div>
+
+    <div id="phone-frame">
+
+        <div id="canvas">
+
+            <div id="post">
+
+                <div id="header">
+
+                    <img draggable="false" id="profile-picture" src="">
+
+                    <div class="flex-list">
+
+                        <span id="answer-tag" style="display: none;">Antwort von:</span>
+
+                        <span id="creator-tag">ERSTELLER</span>
+                        <div class="username-container">
+                            <img draggable="false" class="reply-icon" src="images/reply.png" style="display: none;">
+                            <span id="username">@Username</span>
+                            <img draggable="false" class="verified-icon" src="images/verified.png"
+                                style="display: none;">
+                        </div>
+                        <div class="views-container">
+                            <img draggable="false" class="views-icon" src="images/views.png">
+                            <span id="views-counter">0</span>
+                        </div>
+
+                    </div>
+
+                    <img draggable="false" id="memo-icon" src="images/memo.png">
+
+                </div>
+
+                <div id="main">
+                    <span id="post-text" role="textbox" contenteditable></span>
+                </div>
+
+                <div id="footer">
+                    <div class="likes-container">
+                        <img draggable="false" class="likes-icon" src="images/likes.png">
+                        <span id="likes-counter">0</span>
+                    </div>
+                    <div class="comments-container">
+                        <img draggable="false" class="comments-icon" src="images/comments.png">
+                        <span id="comments-counter">0</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="controls">
+        <button id="verify-post" style="background-color: rgb(80, 167, 109);"><img draggable="false"
+                src="images/verification.png"><span class="tooltip"
+                style="background-color: rgb(61, 129, 84);">Verification
+                Badge</span></button>
+        <button id="owner-post"><img draggable="false" src="images/reddit.png"><span class="tooltip">Channel
+                Post</span></button>
+        <button id="user-post"><img draggable="false" src="images/user.png"><span class="tooltip">User
+                Post</span></button>
+        <button id="post-post" style="background-color: rgb(149, 80, 167);"><img draggable="false"
+                src="images/post.png"><span class="tooltip"
+                style="background-color: rgb(110, 55, 124);">Post</span></button>
+        <button id="answer-post" style="background-color: rgb(149, 80, 167);"><img draggable="false"
+                src="images/answer.png"><span class="tooltip"
+                style="background-color: rgb(110, 55, 124);">Answer</span></button>
+        <button id="download" style="background-color: lightseagreen;"><img draggable="false"
+                src="images/download.png"><span class="tooltip"
+                style="background-color: rgb(22, 133, 127);">Download</span></button>
+    </div>
+
+    <div id="download-canvas">
+
+    </div>
+
+</body>
+
+</html>

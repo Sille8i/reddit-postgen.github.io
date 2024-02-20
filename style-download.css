@@ -1,0 +1,137 @@
+#download-canvas {
+    height: 1920px;
+    width: 1080px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#download-canvas #post {
+    position: relative;
+    background-color: white;
+    border-radius: 1.5vh;
+    width: 80%;
+}
+
+#download-canvas #post #header {
+    position: relative;
+    display: flex;
+    gap: 2vh;
+    padding-inline-start: 1vw;
+    padding-block-start: 1vw;
+}
+
+#download-canvas #post #header #memo-icon {
+    position: absolute;
+    right: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 6.5vh;
+}
+
+#download-canvas #post #header #profile-picture {
+    height: 10vh;
+    border-radius: 1000px;
+}
+
+#download-canvas #post #header #creator-tag {
+    font-size: 1.9vh;
+    color: rgb(0, 153, 255);
+}
+
+#download-canvas #post #header #answer-tag {
+    font-size: 1.9vh;
+    color: rgb(163, 163, 163);
+}
+
+#download-canvas #post #header .flex-list {
+    gap: 0.3vh;
+}
+
+#download-canvas #post #header .username-container {
+    display: flex;
+    align-items: center;
+    gap: 0.3vw;
+}
+
+#download-canvas #post #header .verified-icon {
+    height: 2.4vh;
+}
+
+#download-canvas #post #header .reply-icon {
+    height: 3vh;
+}
+
+#download-canvas #post #header #username {
+    font-size: 3vh;
+    font-weight: 450;
+}
+
+#download-canvas #post #header .views-container {
+    display: flex;
+    align-items: center;
+    gap: 0.3vw;
+}
+
+#download-canvas #post #header .views-icon {
+    height: 2.4vh;
+}
+
+#download-canvas #post #header #views-counter {
+    font-size: 2.4vh;
+    color: rgb(163, 163, 163)
+}
+
+#download-canvas #post #main {
+    padding-inline-start: 1vw;
+    padding-inline-end: 1vw;
+    padding-block-start: 1vw;
+    padding-block-end: 1vw;
+}
+
+#download-canvas #post #main #post-text {
+    resize: none;
+    outline: none;
+    overflow: visible;
+    border: none;
+    font-size: 2.4vh !important;
+    width: 100%;
+    cursor: text;
+}
+
+#download-canvas #post #main #post-text span {
+    font-size: 2.4vh !important;
+}
+
+#download-canvas #post #main #post-text:empty::before {
+    content: "Write here...";
+    color: gray;
+    font-size: 2.4vh;
+}
+
+#download-canvas #post #footer {
+    padding-inline-start: 1vw;
+    padding-inline-end: 1vw;
+    padding-block-end: 1vw;
+    display: flex;
+    gap: 1vw;
+}
+
+#download-canvas #post #footer .likes-container,
+#download-canvas #post #footer .comments-container {
+    display: flex;
+    align-items: center;
+    gap: 0.3vw;
+}
+
+#download-canvas #post #footer .likes-icon,
+#download-canvas #post #footer .comments-icon {
+    height: 2.2vh;
+}
+
+#download-canvas #post #footer #likes-counter,
+#download-canvas #post #footer #comments-counter {
+    font-size: 2vh;
+    color: rgb(163, 163, 163)
+}

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    cursor: default;
+    user-select: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+#blur {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(83, 67, 95);
+    backdrop-filter: blur(0.3vh);
+}
+
+#canvas {
+    height: 80vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#phone-frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(images/phone-frame.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 99%;
+}
+
+.flex-list {
+    display: flex;
+    flex-direction: column;
+}
+
+#post {
+    position: relative;
+    background-color: white;
+    border-radius: 1.5vh;
+    width: 80%;
+}
+
+#post #header {
+    position: relative;
+    display: flex;
+    gap: 1vh;
+    padding-inline-start: 0.5vw;
+    padding-block-start: 0.5vw;
+}
+
+#post #header #memo-icon {
+    position: absolute;
+    right: 0.5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2.7vh;
+}
+
+#post #header #profile-picture {
+    height: 4.5vh;
+    border-radius: 1000px;
+}
+
+#post #header #creator-tag {
+    font-size: 0.8vh;
+    color: rgb(0, 153, 255);
+}
+
+#post #header #answer-tag {
+    font-size: 0.8vh;
+    color: rgb(163, 163, 163);
+}
+
+#post #header .flex-list {
+    gap: 0.2vh;
+}
+
+#post #header .username-container {
+    display: flex;
+    align-items: center;
+    gap: 0.1vw;
+}
+
+#post #header .verified-icon {
+    height: 1.1vh;
+}
+
+#post #header .reply-icon {
+    height: 1.1vh;
+}
+
+#post #header #username {
+    font-size: 1.2vh;
+}
+
+#post #header .views-container {
+    display: flex;
+    align-items: center;
+    gap: 0.1vw;
+}
+
+#post #header .views-icon {
+    height: 1vh;
+}
+
+#post #header #views-counter {
+    font-size: 1vh;
+    color: rgb(163, 163, 163)
+}
+
+#post #main {
+    padding-inline-start: 0.5vw;
+    padding-inline-end: 0.5vw;
+    padding-block-start: 0.2vw;
+    padding-block-end: 0.5vw;
+}
+
+#post #main #post-text {
+    resize: none;
+    outline: none;
+    overflow: visible;
+    border: none;
+    font-size: 1.2vh;
+    width: 100%;
+    cursor: text;
+}
+
+#post #main #post-text * {
+    cursor: text;
+}
+
+#post #main #post-text:empty::before {
+    content: "Write here...";
+    color: gray;
+}
+
+#post #footer {
+    padding-inline-start: 0.5vw;
+    padding-inline-end: 0.5vw;
+    padding-block-end: 0.5vw;
+    display: flex;
+    gap: 0.5vw;
+}
+
+#post #footer .likes-container,
+#post #footer .comments-container {
+    display: flex;
+    align-items: center;
+    gap: 0.2vw;
+}
+
+#post #footer .likes-icon,
+#post #footer .comments-icon {
+    height: 1.1vh;
+}
+
+#post #footer #likes-counter,
+#post #footer #comments-counter {
+    font-size: 1.1vh;
+    color: rgb(163, 163, 163)
+}
+
+#controls {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+#controls button {
+    position: relative;
+    background-color: lightslategray;
+    border: none;
+    outline: none;
+    padding: 1.5vh;
+    cursor: pointer;
+    border-radius: 2vh;
+}
+
+#controls button .tooltip {
+    position: absolute;
+    left: 4vw;
+    text-wrap: nowrap;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(86, 95, 105);
+    padding: 0.5vw;
+    color: white;
+    border-radius: 0.5vh;
+    opacity: 0;
+}
+
+#controls button:hover .tooltip {
+    opacity: 1;
+}
+
+#controls button .tooltip:hover {
+    pointer-events: none;
+    opacity: 0;
+}
+
+#controls button img {
+    height: 3vh;
+    width: 3vh;
+    cursor: pointer;
+}
